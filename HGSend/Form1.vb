@@ -15,11 +15,4 @@ Public Class Form1
 
     End Sub
 
-    Sub OnValidateCertificate(control As FtpClient, e As FtpSslValidationEventArgs)
-
-        '// 証明書の内容を確認しない
-        e.Accept = True
-
-    End Sub
-
 End Class

@@ -9,6 +9,12 @@ Module HGSend0
     Private TmpDir As String
     Private FNaCRP As String
 
+    ''' <summary>
+    ''' 兵庫県柔道整復師会
+    ''' 療養費請求データの暗号化とFTPS送信
+    ''' .NET Framework4.5に対応しておりWindows8以降で動作する
+    ''' WindowsVista、Windows7でも.NET Framework4.5以降をインストールすれば使える
+    ''' </summary>
     Sub Main()
         'command line
         '1: 0=本番モードで送信 1= TestModeで送信
