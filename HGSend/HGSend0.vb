@@ -2,6 +2,7 @@
 Imports System.Security.Cryptography
 Imports System.Net
 Imports FluentFTP
+Imports System.Text
 
 Module HGSend0
 
@@ -21,6 +22,13 @@ Module HGSend0
         '2: 作業フォルダのパス C:\MapleH\Work\"
         '3: 暗号化後のファイル名 20240601_012345.CRP
 
+        If Environment.GetCommandLineArgs.Count = 4 Then
+
+            Dim frmSend As New frmCSend
+            frmSend.ShowDialog()
+            Exit Sub
+
+        End If
         If Environment.GetCommandLineArgs.Count <> 4 Then
             MessageBox.Show("パラメータの数が異常です")
             Return
@@ -211,4 +219,38 @@ Module HGSend0
 
     End Sub
 
+    ''' <summary>
+    ''' 暗号化後ファイル名取得
+    ''' </summary>
+    ''' <param name="Src"></param>
+    ''' <returns></returns>
+    Function GetCRPFileName(Src As String) As String
+
+        Using inStream = New StreamReader(Src, Encoding.GetEncoding("Shift_JIS"))
+
+            Dim S As String = inStream.ReadLine()
+
+            Return Mid(S, 5, 6) + "01_" + Mid(S, 18, 6) + ".CRP"
+
+        End Using
+
+    End Function
+
+    Public Function Left_(ByVal S As String, ByVal I As Integer) As String
+        'Microsoft.VisualBasic.Left()と同じ
+        'Inports Microsoft.VisualBasicを書いてもMicrosoft.VisualBasicの
+        '名前空間を指定しなければならない場合に名前が長くならないようにするため
+
+        Return Left(S, I)
+
+    End Function
+
+    Public Function Right_(ByVal S As String, ByVal I As Integer) As String
+        'Microsoft.VisualBasic.Left()と同じ
+        'Inports Microsoft.VisualBasicを書いてもMicrosoft.VisualBasicの
+        '名前空間を指定しなければならない場合に名前が長くならないようにするため
+
+        Return Right(S, I)
+
+    End Function
 End Module
