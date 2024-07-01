@@ -22,6 +22,7 @@ Partial Class frmCSend
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCSend))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cmdChangeFolder = New System.Windows.Forms.Button()
         Me.lblFilePath = New System.Windows.Forms.Label()
@@ -130,7 +131,6 @@ Partial Class frmCSend
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(817, 380)
-        Me.ControlBox = False
         Me.Controls.Add(Me.cmdEnd)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblFileNa2)
@@ -141,7 +141,9 @@ Partial Class frmCSend
         Me.Controls.Add(Me.cmdChangeFolder)
         Me.Controls.Add(Me.lblFilePath)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmCSend"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "療養費請求データファイル（RYOYOHI.DAT)送信アプリ"
         Me.ResumeLayout(False)
 

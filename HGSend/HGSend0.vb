@@ -22,7 +22,7 @@ Module HGSend0
         '2: 作業フォルダのパス C:\MapleH\Work\"
         '3: 暗号化後のファイル名 20240601_012345.CRP
 
-        If Environment.GetCommandLineArgs.Count = 4 Then
+        If Environment.GetCommandLineArgs.Count = 1 Then
 
             Dim frmSend As New frmCSend
             frmSend.ShowDialog()

@@ -49,11 +49,11 @@
 
         Dim CRPFNa As String = GetCRPFileName(lblFilePath.Text)
 
-        EncryptForHG(lblFilePath.Text, System.IO.Path.GetDirectoryName(appPath) + "\" + CRPFNa)
+        EncryptForHG(lblFilePath.Text, System.IO.Path.GetDirectoryName(lblFilePath.Text) + "\" + CRPFNa)
 
         Dim ResMsg As String = ""
 
-        If SendData(System.IO.Path.GetDirectoryName(appPath) + "\", CRPFNa, ResMsg, True) Then
+        If SendData(System.IO.Path.GetDirectoryName(lblFilePath.Text) + "\", CRPFNa, ResMsg, True) Then
             MessageBox.Show("送信完了" + vbCrLf + ResMsg)
         Else
             MessageBox.Show("送信失敗" + vbCrLf + ResMsg)

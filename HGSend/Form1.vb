@@ -5,7 +5,7 @@ Public Class Form1
 
     Private Sub cmdFTPSTest_Click(sender As Object, e As EventArgs) Handles cmdFTPSTest.Click
 
-        Dim ResMsg As String
+        Dim ResMsg As String = ""
 
         If SendData("C:\DDD\", "20240601_012345.CRP", ResMsg) Then
             MessageBox.Show("送信完了" + vbCrLf + ResMsg)
