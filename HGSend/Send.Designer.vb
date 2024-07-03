@@ -32,6 +32,7 @@ Partial Class frmCSend
         Me.lblFileNa2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmdEnd = New System.Windows.Forms.Button()
+        Me.lblTest_Mode = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label3
@@ -126,11 +127,24 @@ Partial Class frmCSend
         Me.cmdEnd.Text = "終了"
         Me.cmdEnd.UseVisualStyleBackColor = True
         '
+        'lblTest_Mode
+        '
+        Me.lblTest_Mode.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblTest_Mode.ForeColor = System.Drawing.Color.Red
+        Me.lblTest_Mode.Location = New System.Drawing.Point(577, 282)
+        Me.lblTest_Mode.Name = "lblTest_Mode"
+        Me.lblTest_Mode.Size = New System.Drawing.Size(152, 31)
+        Me.lblTest_Mode.TabIndex = 16
+        Me.lblTest_Mode.Text = "TEST MODE"
+        Me.lblTest_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTest_Mode.Visible = False
+        '
         'frmCSend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(817, 380)
+        Me.Controls.Add(Me.lblTest_Mode)
         Me.Controls.Add(Me.cmdEnd)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.lblFileNa2)
@@ -142,6 +156,7 @@ Partial Class frmCSend
         Me.Controls.Add(Me.lblFilePath)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "frmCSend"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "療養費請求データファイル（RYOYOHI.DAT)送信アプリ"
@@ -158,4 +173,5 @@ Partial Class frmCSend
     Friend WithEvents lblFileNa2 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents cmdEnd As Button
+    Friend WithEvents lblTest_Mode As Label
 End Class

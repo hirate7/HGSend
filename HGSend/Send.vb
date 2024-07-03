@@ -36,6 +36,8 @@
 
     End Sub
 
+    Private Test_Mode As Boolean = False
+
     Private Sub cmdFTPS_Click(sender As Object, e As EventArgs) Handles cmdFTPS.Click
 
         Dim fi As New System.IO.FileInfo(lblFilePath.Text)
@@ -109,6 +111,16 @@
     Private Sub cmdEnd_Click(sender As Object, e As EventArgs) Handles cmdEnd.Click
 
         Me.Close()
+
+    End Sub
+
+    Private Sub frmCSend_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+
+        '/// TEST MODE shift + "M" ///
+        If e.Shift And e.KeyCode = Keys.M Then
+            Test_Mode = True
+            lblTest_Mode.Visible = True
+        End If
 
     End Sub
 End Class
