@@ -42,15 +42,17 @@ Module HGSend0
 
         Dim ResMsg As String = ""
 
+        Dim enc As System.Text.Encoding = System.Text.Encoding.GetEncoding("shift_jis")
+
         If SendData(TmpDir, FNaCRP, ResMsg, Test_Mode) Then
             '成功
-            Using outStream = New StreamWriter(TmpDir + "HGSendResS.txt", FileMode.Create)
+            Using outStream = New StreamWriter(TmpDir + "HGSendResS.txt", False, enc)
                 'MessageBox.Show(TmpDir + "HGSendResS.txt")
                 outStream.Write("Success")
             End Using
         Else
             '失敗
-            Using outStream = New StreamWriter(TmpDir + "HGSendResF.txt", FileMode.Create)
+            Using outStream = New StreamWriter(TmpDir + "HGSendResF.txt", False, enc)
                 outStream.Write(ResMsg)
             End Using
         End If
