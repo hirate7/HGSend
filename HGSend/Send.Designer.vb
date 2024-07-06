@@ -47,13 +47,14 @@ Partial Class frmCSend
         '
         'cmdChangeFolder
         '
+        Me.cmdChangeFolder.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.cmdChangeFolder.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmdChangeFolder.Location = New System.Drawing.Point(696, 127)
         Me.cmdChangeFolder.Name = "cmdChangeFolder"
         Me.cmdChangeFolder.Size = New System.Drawing.Size(33, 47)
         Me.cmdChangeFolder.TabIndex = 8
         Me.cmdChangeFolder.Text = "▼"
-        Me.cmdChangeFolder.UseVisualStyleBackColor = True
+        Me.cmdChangeFolder.UseVisualStyleBackColor = False
         '
         'lblFilePath
         '
@@ -68,13 +69,14 @@ Partial Class frmCSend
         '
         'cmdFTPS
         '
+        Me.cmdFTPS.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.cmdFTPS.Font = New System.Drawing.Font("ＭＳ ゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmdFTPS.Location = New System.Drawing.Point(586, 225)
         Me.cmdFTPS.Name = "cmdFTPS"
         Me.cmdFTPS.Size = New System.Drawing.Size(90, 40)
         Me.cmdFTPS.TabIndex = 10
         Me.cmdFTPS.Text = "送信"
-        Me.cmdFTPS.UseVisualStyleBackColor = True
+        Me.cmdFTPS.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -119,13 +121,14 @@ Partial Class frmCSend
         '
         'cmdEnd
         '
+        Me.cmdEnd.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.cmdEnd.Font = New System.Drawing.Font("ＭＳ ゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmdEnd.Location = New System.Drawing.Point(350, 315)
         Me.cmdEnd.Name = "cmdEnd"
         Me.cmdEnd.Size = New System.Drawing.Size(128, 40)
         Me.cmdEnd.TabIndex = 15
         Me.cmdEnd.Text = "終了"
-        Me.cmdEnd.UseVisualStyleBackColor = True
+        Me.cmdEnd.UseVisualStyleBackColor = False
         '
         'lblTest_Mode
         '
