@@ -15,12 +15,16 @@ Module HGSend0
     ''' 療養費請求データの暗号化とFTPS送信
     ''' .NET Framework4.5に対応しておりWindows8以降で動作する
     ''' WindowsVista、Windows7でも.NET Framework4.5以降をインストールすれば使える
+    ''' 
+    ''' コマンドライン
+    ''' 無し
+    '''  送信用フォームを表示する
+    ''' パラメータ2つ
+    '''  1: 0=本番モードで送信 1= TestModeで送信
+    '''  2: 作業フォルダのパス C:\MapleH\Work\"
+    '''  3: 暗号化後のファイル名 20240601_012345.CRP
     ''' </summary>
     Sub Main()
-        'command line
-        '1: 0=本番モードで送信 1= TestModeで送信
-        '2: 作業フォルダのパス C:\MapleH\Work\"
-        '3: 暗号化後のファイル名 20240601_012345.CRP
 
         If Environment.GetCommandLineArgs.Count = 1 Then
 
@@ -147,6 +151,11 @@ Module HGSend0
     Function SendData(ByVal Path As String, ByVal FNa As String, ByRef ResMsg As String, Optional ByVal Test As Boolean = True) As Boolean
 
         Dim Res As Boolean
+
+        If System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable() = False Then
+            ResMsg = "ネットワークに接続されていません。"
+            Return Res
+        End If
 
         Dim client As FtpClient = New FtpClient()
 
