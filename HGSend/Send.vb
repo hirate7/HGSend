@@ -61,6 +61,8 @@
             MessageBox.Show("送信失敗" + vbCrLf + ResMsg)
         End If
 
+        System.IO.File.Delete(System.IO.Path.GetDirectoryName(lblFilePath.Text) + "\" + CRPFNa)
+
     End Sub
 
     Private Sub lblFilePath_DragEnter(sender As Object, e As DragEventArgs) Handles lblFilePath.DragEnter
@@ -82,7 +84,7 @@
         'ドロップされたすべてのファイル名を取得する
         Dim fileName As String() = CType(e.Data.GetData(DataFormats.FileDrop, False), String())
         'lblFilePathに追加する
-        If System.IO.Path.GetFileName(lblFilePath.Text) = "RYOYOHI.DAT" Then
+        If System.IO.Path.GetFileName(fileName(0)) = "RYOYOHI.DAT" Then
             lblFilePath.Text = fileName(0)
         End If
 
@@ -125,4 +127,5 @@
         End If
 
     End Sub
+
 End Class
