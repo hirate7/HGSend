@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2BA4224DE5844470909CFD0FF24E1672"
+        "MsmKey" = "8:_71008C840E4648B8A396A1189567D384"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,12 +40,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B6AD2A9F2CC1BACCAC5F2F5883044659"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C02712D2077C4ADFA02B94C23B6FF279"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -53,6 +47,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_BAD1F4F3CE50DE2AE14687DCA35F5B2E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B6AD2A9F2CC1BACCAC5F2F5883044659"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +73,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -89,6 +105,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -118,9 +142,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2BA4224DE5844470909CFD0FF24E1672"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_71008C840E4648B8A396A1189567D384"
             {
-            "SourcePath" = "8:..\\HGSend\\HGSend.ico"
+            "SourcePath" = "8:..\\HGSend.ico"
             "TargetName" = "8:HGSend.ico"
             "Tag" = "8:"
             "Folder" = "8:_54C1559AAF6440B0A334AD974B7C412A"
@@ -257,7 +281,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:HGSend"
         "ProductCode" = "8:{204B9A6D-75FE-464B-B11A-3ACBCD469220}"
-        "PackageCode" = "8:{B2747703-946C-481F-939B-86C9B756CC06}"
+        "PackageCode" = "8:{ED26B1DB-CFB3-45A2-A728-04B78DC2C7C7}"
         "UpgradeCode" = "8:{04F2F5D7-49AA-4C42-A047-05D05DC0CFB9}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -388,7 +412,7 @@
             "Target" = "8:_C02712D2077C4ADFA02B94C23B6FF279"
             "Folder" = "8:_F8C55B034DA647DCB7A6445E47BBCF10"
             "WorkingFolder" = "8:_54C1559AAF6440B0A334AD974B7C412A"
-            "Icon" = "8:_2BA4224DE5844470909CFD0FF24E1672"
+            "Icon" = "8:_71008C840E4648B8A396A1189567D384"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E94F565A89924EB19FF46B0E7632742D"
@@ -402,7 +426,7 @@
             "Target" = "8:_C02712D2077C4ADFA02B94C23B6FF279"
             "Folder" = "8:_60EC4802EBEF4683A0D52DB777D8B6B2"
             "WorkingFolder" = "8:_54C1559AAF6440B0A334AD974B7C412A"
-            "Icon" = "8:_2BA4224DE5844470909CFD0FF24E1672"
+            "Icon" = "8:_71008C840E4648B8A396A1189567D384"
             "Feature" = "8:"
             }
         }

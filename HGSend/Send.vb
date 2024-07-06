@@ -81,8 +81,10 @@
         'コントロール内にドロップされたとき実行される
         'ドロップされたすべてのファイル名を取得する
         Dim fileName As String() = CType(e.Data.GetData(DataFormats.FileDrop, False), String())
-        'ListBoxに追加する
-        lblFilePath.Text = fileName(0)
+        'lblFilePathに追加する
+        If System.IO.Path.GetFileName(lblFilePath.Text) = "RYOYOHI.DAT" Then
+            lblFilePath.Text = fileName(0)
+        End If
 
     End Sub
 

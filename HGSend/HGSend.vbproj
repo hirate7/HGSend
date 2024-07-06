@@ -51,7 +51,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>HGSendC.ico</ApplicationIcon>
+    <ApplicationIcon>HGSend.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,6 +127,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -141,7 +145,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HGSendC.ico" />
+    <Content Include="HGSend.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

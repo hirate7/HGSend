@@ -143,6 +143,7 @@ Partial Class frmCSend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Beige
         Me.ClientSize = New System.Drawing.Size(817, 380)
         Me.Controls.Add(Me.lblTest_Mode)
         Me.Controls.Add(Me.cmdEnd)
@@ -157,6 +158,8 @@ Partial Class frmCSend
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmCSend"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "療養費請求データファイル（RYOYOHI.DAT)送信アプリ"
