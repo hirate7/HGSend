@@ -110,6 +110,12 @@
 
         cmdFTPS.Enabled = False
 
+        '自分自身の実行ファイルのパスのRYOYOHI.DATをデフォルトで設定する
+        Dim S As String = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\RYOYOHI.DAT"
+        If Dir(S) <> "" Then
+            lblFilePath.Text = S
+        End If
+
     End Sub
 
     Private Sub cmdEnd_Click(sender As Object, e As EventArgs) Handles cmdEnd.Click
