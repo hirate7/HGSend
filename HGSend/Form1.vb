@@ -15,4 +15,23 @@ Public Class Form1
 
     End Sub
 
+    Private Sub ToFile_Click(sender As Object, e As EventArgs) Handles ToFile.Click
+
+        'Dim A() As Byte = System.Text.Encoding.UTF8.GetBytes("HYG兵庫県柔道整復師会,svy03qwu!9c67z2k,hyogo.jyuseishi.com,ftp6441@hyogo.jyuseishi.com,ftp6441-test@hyogo.jyuseishi.com,x0jE!7C68$")
+
+        'Dim B() As Byte = ChangeData(A)
+        'Dim I As Integer
+        'Label1.Text = ""
+        'For I = 0 To B.Length - 1
+        '    Label1.Text = Label1.Text + Str(B(I))
+        'Next
+
+        'My.Computer.FileSystem.WriteAllBytes("C:\MapleH\FTPS.DLL", B, False)
+
+        'Dim C() As Byte = My.Computer.FileSystem.ReadAllBytes("C:\MapleH\FTPS.DLL")
+
+        'Label2.Text = System.Text.Encoding.UTF8.GetString(ChangeData(C))
+
+    End Sub
+
 End Class

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3A8B8520-9E9E-48E5-B3F1-1763AD15C203}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>HGSend.HGSend0</StartupObject>
     <RootNamespace>HGSend</RootNamespace>
     <AssemblyName>HGSend</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HGSend.ico" />
+    <None Include="Resources\FTPS.DLL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

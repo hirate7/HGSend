@@ -55,7 +55,7 @@
 
         Dim ResMsg As String = ""
 
-        If SendData(System.IO.Path.GetDirectoryName(lblFilePath.Text) + "\", CRPFNa, ResMsg, True) Then
+        If SendData(System.IO.Path.GetDirectoryName(lblFilePath.Text) + "\", CRPFNa, ResMsg, Test_Mode) Then
             MessageBox.Show("送信完了" + vbCrLf + ResMsg)
         Else
             MessageBox.Show("送信失敗" + vbCrLf + ResMsg)

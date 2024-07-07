@@ -10,6 +10,8 @@ Module HGSend0
     Private TmpDir As String
     Private FNaCRP As String
 
+    Private HGX() As String
+
     ''' <summary>
     ''' 兵庫県柔道整復師会
     ''' 療養費請求データの暗号化とFTPS送信
@@ -25,6 +27,8 @@ Module HGSend0
     '''  3: 暗号化後のファイル名 20240601_012345.CRP
     ''' </summary>
     Sub Main()
+
+        Init_HGSend()
 
         If Environment.GetCommandLineArgs.Count = 1 Then
 
@@ -65,8 +69,10 @@ Module HGSend0
 
     Function GetKey() As Byte()
 
-        Dim byteData = System.Text.Encoding.UTF8.GetBytes("HYG兵庫県柔道整復師会")
-        Dim DeriveBytes As New System.Security.Cryptography.Rfc2898DeriveBytes("svy03qwu!9c67z2k", byteData, 1000)
+        'Dim byteData = System.Text.Encoding.UTF8.GetBytes("HYG兵庫県柔道整復師会")
+        Dim byteData = System.Text.Encoding.UTF8.GetBytes(HGX(0))
+        'Dim DeriveBytes As New System.Security.Cryptography.Rfc2898DeriveBytes("svy03qwu!9c67z2k", byteData, 1000)
+        Dim DeriveBytes As New System.Security.Cryptography.Rfc2898DeriveBytes(HGX(1), byteData, 1000)
         Dim Key As Byte() = DeriveBytes.GetBytes(256 \ 8)
 
         Return Key
@@ -160,7 +166,8 @@ Module HGSend0
         Dim client As FtpClient = New FtpClient()
 
         'ホスト名設定
-        client.Host = "hyogo.jyuseishi.com"
+        'client.Host = "hyogo.jyuseishi.com"
+        client.Host = HGX(2)
 
         'ポート
         client.Port = 21
@@ -168,11 +175,14 @@ Module HGSend0
         '// 資格情報の設定
         Dim User As String
         If Test Then
-            User = "ftp6441-test@hyogo.jyuseishi.com"
+            'User = "ftp6441-test@hyogo.jyuseishi.com"
+            User = HGX(4)
         Else
-            User = "ftp6441@hyogo.jyuseishi.com"
+            'User = "ftp6441@hyogo.jyuseishi.com"
+            User = HGX(3) '"ftp6441@hyogo.jyuseishi.com"
         End If
-        client.Credentials = New NetworkCredential(User, "x0jE!7C68$")
+        'client.Credentials = New NetworkCredential(User, "x0jE!7C68$")
+        client.Credentials = New NetworkCredential(User, HGX(5))
 
         '// 要求の完了後に接続を閉じる
         client.SocketKeepAlive = False
@@ -264,4 +274,29 @@ Module HGSend0
         Return Right(S, I)
 
     End Function
+
+    Public Function ChangeData(B() As Byte) As Byte()
+
+        Dim I As Integer
+        Dim Res() As Byte
+        ReDim Res(B.Length - 1)
+        For I = 0 To B.Length - 1
+            Res(B.Length - I - 1) = Not (B(I))
+        Next
+        Return Res
+
+    End Function
+
+    Public Sub Init_HGSend()
+
+        Dim appPath As String = System.Reflection.Assembly.GetExecutingAssembly().Location
+
+        Dim C() As Byte = My.Computer.FileSystem.ReadAllBytes(System.IO.Path.GetDirectoryName(appPath) + "\FTPS.DLL")
+
+        Dim S As String = System.Text.Encoding.UTF8.GetString(ChangeData(C))
+
+        HGX = Split(S, ",")
+
+    End Sub
+
 End Module
