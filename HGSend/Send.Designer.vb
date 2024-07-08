@@ -42,8 +42,9 @@ Partial Class frmCSend
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(694, 20)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "↓ここに送信したい療養費請求データファイル（RYOYOHI.DAT）をドラッグ＆ドロップしてください。"
+        Me.Label3.Text = "↓ここに送信したい療養費請求データ（RYOYOHI.DAT）をドラッグ＆ドロップしてください。"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label3.Visible = False
         '
         'cmdChangeFolder
         '
@@ -55,10 +56,10 @@ Partial Class frmCSend
         Me.cmdChangeFolder.TabIndex = 8
         Me.cmdChangeFolder.Text = "▼"
         Me.cmdChangeFolder.UseVisualStyleBackColor = False
+        Me.cmdChangeFolder.Visible = False
         '
         'lblFilePath
         '
-        Me.lblFilePath.AllowDrop = True
         Me.lblFilePath.BackColor = System.Drawing.Color.White
         Me.lblFilePath.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblFilePath.Font = New System.Drawing.Font("ＭＳ ゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
@@ -81,12 +82,12 @@ Partial Class frmCSend
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("ＭＳ Ｐゴシック", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(23, 33)
+        Me.Label1.Location = New System.Drawing.Point(1, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(792, 31)
+        Me.Label1.Size = New System.Drawing.Size(815, 31)
         Me.Label1.TabIndex = 11
-        Me.Label1.Text = "療養費請求データファイル（RYOYOHI.DAT)を兵庫県柔道整復師会に送信できます。"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label1.Text = "療養費請求データ（RYOYOHI.DAT)を兵庫県柔道整復師会に送信できます。"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -97,6 +98,7 @@ Partial Class frmCSend
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "ここから選択することもできます。↑"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Label2.Visible = False
         '
         'lblFileNa2
         '
@@ -165,7 +167,7 @@ Partial Class frmCSend
         Me.MinimizeBox = False
         Me.Name = "frmCSend"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "療養費請求データファイル（RYOYOHI.DAT)送信アプリ"
+        Me.Text = "療養費請求データ送信アプリ"
         Me.ResumeLayout(False)
 
     End Sub

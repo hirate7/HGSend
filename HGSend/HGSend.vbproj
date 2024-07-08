@@ -146,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HGSend.ico" />
-    <None Include="Resources\FTPS.DLL" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
