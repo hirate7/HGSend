@@ -46,6 +46,8 @@
             Return
         End If
 
+        Me.Cursor = Cursors.WaitCursor
+
         '自分自身の実行ファイルのパスを取得する
         Dim appPath As String = System.Reflection.Assembly.GetExecutingAssembly().Location
 
@@ -62,6 +64,8 @@
         End If
 
         System.IO.File.Delete(System.IO.Path.GetDirectoryName(lblFilePath.Text) + "\" + CRPFNa)
+
+        Me.Cursor = Cursors.Default
 
     End Sub
 
