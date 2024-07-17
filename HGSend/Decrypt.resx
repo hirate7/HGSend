@@ -117,30 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="mnuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="cmdEnd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAIAEBAQAAAABAAoAQAAJgAAACAgEAAAAAQA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
-        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
-        AAAA//8A/wAAAP8A/wD//wAA////AMzMzMzIAIAAwAAAAAAMzADAAAAAAMwMwMAAAAAMzAzMwAAAAAyA
-        AIzADMzMDMgIzMAAAAAAzIzAwAiIiAAMzADADMzMwAAAAMAAAAAADIAAwAzMzAAMgADACIiIAAyAAMAA
-        AAAADIAAwAAAAADMAADAAAAADMAAAMzMzMzMAAAAADcAAH/jAAB/yQAAf4gAAH+cAABgiAAAf8EAAGDj
-        AABgfwAAf+cAAGDnAABg5wAAf+cAAH/PAAB/nwAAAD8AACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
-        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD/
-        /wD/AAAA/wD/AP//AAD///8AzMzMzMzMzMzMwAAAAAAAAMzMzMzMzMzMzAAIzMzAAADMzMzMzMzMzMAA
-        zMzMzMAAzMAAAAAAAAAADMzMzMzMAMzAAAAAAAAAAMzMzMzMzMDMwAAAAAAAAAzMzMwMzMzAzMAAAAAA
-        AAAMzMzMDMzMzMzAAAAAAAAADMzMzAzMzMzMwAAAAAAAAAzMwMwMwMzMzMAAAAAAAAAMzMAMDADMzMzA
-        AAzMzMzADMzMAAAMzMzMwAAMzMzMwAzMzMAAzMzIzMAAAAAAAAAAzMzMDMzMwMzAAAAAAAAAAMzMzMzM
-        zADMwAAAAAAAAAAMzMzMzMgAzMAADMzMzMzAAAzMzMwAAMzAAAzMzMzMzAAAAMAAAADMwAAAAAAAAAAA
-        AAAAAAAAzMAAAAAAAAAAAAAMzAAAAMzAAAAAAAAAAAAADMwAAADMwAAMzMzMwAAAAAzMAAAAzMAADMzM
-        zMAAAAAMzAAAAMzAAAAAAAAAAAAADMwAAADMwAAAAAAAAAAAAAzMAAAAzMAAAAAAAAAADMzMzAAAAMzA
-        AAAAAAAAAMzMzMwAAADMwAAAAAAAAADMzMzAAAAAzMAAAAAAAAAAzMzMAAAAAMzAAAAAAAAAAMzMwAAA
-        AADMzMzMzMzMzMzMzAAAAAAAzMzMzMzMzMzMzMAAAAAAAMzMzMzMzMzMzMwAAAAAAAAAAB//AAA4HwAA
-        cAcf/+ADH//AAR//gIEf/4CAH/+AgB//hJAf/4awHgGD4B4BgcAf/8CBH//AAx//4AMeAHgPHgA/fx//
-        //8f//4/H//+Px4B/j8eAf4/H//+Px///j8f/+A/H//APx//wH8f/8D/H//B/wAAA/8AAAf/AAAP/w==
-</value>
-  </data>
+  <metadata name="Label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cmdDecrypt.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cmdChangeFolder.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblFilePath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

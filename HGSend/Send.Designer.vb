@@ -33,6 +33,9 @@ Partial Class frmCSend
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cmdEnd = New System.Windows.Forms.Button()
         Me.lblTest_Mode = New System.Windows.Forms.Label()
+        Me.mnuMain = New System.Windows.Forms.MenuStrip()
+        Me.mnuDecrypt = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMain.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -144,6 +147,23 @@ Partial Class frmCSend
         Me.lblTest_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.lblTest_Mode.Visible = False
         '
+        'mnuMain
+        '
+        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDecrypt})
+        Me.mnuMain.Location = New System.Drawing.Point(0, 0)
+        Me.mnuMain.Name = "mnuMain"
+        Me.mnuMain.Size = New System.Drawing.Size(817, 24)
+        Me.mnuMain.TabIndex = 17
+        Me.mnuMain.Text = "MenuStrip1"
+        Me.mnuMain.Visible = False
+        '
+        'mnuDecrypt
+        '
+        Me.mnuDecrypt.Name = "mnuDecrypt"
+        Me.mnuDecrypt.Size = New System.Drawing.Size(43, 20)
+        Me.mnuDecrypt.Text = "復号"
+        Me.mnuDecrypt.Visible = False
+        '
         'frmCSend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -160,15 +180,20 @@ Partial Class frmCSend
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.cmdChangeFolder)
         Me.Controls.Add(Me.lblFilePath)
+        Me.Controls.Add(Me.mnuMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
+        Me.MainMenuStrip = Me.mnuMain
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmCSend"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "療養費請求データ送信アプリ"
+        Me.mnuMain.ResumeLayout(False)
+        Me.mnuMain.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -182,4 +207,6 @@ Partial Class frmCSend
     Friend WithEvents Label4 As Label
     Friend WithEvents cmdEnd As Button
     Friend WithEvents lblTest_Mode As Label
+    Friend WithEvents mnuMain As MenuStrip
+    Friend WithEvents mnuDecrypt As ToolStripMenuItem
 End Class

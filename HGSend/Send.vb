@@ -136,6 +136,18 @@
             lblTest_Mode.Visible = True
         End If
 
+        If e.Shift And e.KeyCode = Keys.D Then
+            mnuMain.Visible = True
+            mnuDecrypt.Visible = True
+        End If
+
     End Sub
 
+    Private Sub mnuDecrypt_Click(sender As Object, e As EventArgs) Handles mnuDecrypt.Click
+
+        Dim frmDecrypt As New frmCDecrypt
+
+        frmDecrypt.ShowDialog()
+
+    End Sub
 End Class
