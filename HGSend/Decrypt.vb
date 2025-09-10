@@ -51,4 +51,10 @@
         MessageBox.Show("復号しました。")
 
     End Sub
+
+    Private Sub frmCDecrypt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Init_HGSend()
+
+    End Sub
 End Class

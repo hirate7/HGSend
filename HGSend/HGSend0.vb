@@ -7,6 +7,7 @@ Imports System.Text
 Module HGSend0
 
     Private Test_Mode As Boolean
+    Private EncryptOnly As Boolean
     Private TmpDir As String
     Private FNaCRP As String
 
@@ -21,8 +22,8 @@ Module HGSend0
     ''' コマンドライン
     ''' 無し
     '''  送信用フォームを表示する
-    ''' パラメータ2つ
-    '''  1: 0=本番モードで送信 1= TestModeで送信
+    ''' パラメータ3つ
+    '''  1: 0=本番モードで送信 1=TestModeで送信 2=暗号化のみ
     '''  2: 作業フォルダのパス C:\MapleH\Work\"
     '''  3: 暗号化後のファイル名 20240601_012345.CRP
     ''' </summary>
@@ -42,7 +43,18 @@ Module HGSend0
             Return
         End If
 
-        Test_Mode = (Environment.GetCommandLineArgs(1) = "1")
+        Select Case Val(Environment.GetCommandLineArgs(1))
+            Case 0
+                Test_Mode = False
+                EncryptOnly = False
+            Case 1
+                Test_Mode = True
+                EncryptOnly = False
+            Case 2
+                Test_Mode = True '安全のためTrueにしておく
+                EncryptOnly = True
+        End Select
+
         TmpDir = Environment.GetCommandLineArgs(2)
         FNaCRP = Environment.GetCommandLineArgs(3)
 
@@ -52,17 +64,25 @@ Module HGSend0
 
         Dim enc As System.Text.Encoding = System.Text.Encoding.GetEncoding("shift_jis")
 
-        If SendData(TmpDir, FNaCRP, ResMsg, Test_Mode) Then
-            '成功
+        If EncryptOnly Then
+            '暗号化のみ
             Using outStream = New StreamWriter(TmpDir + "HGSendResS.txt", False, enc)
-                'MessageBox.Show(TmpDir + "HGSendResS.txt")
-                outStream.Write("Success")
+                outStream.Write("Encrypted")
             End Using
         Else
-            '失敗
-            Using outStream = New StreamWriter(TmpDir + "HGSendResF.txt", False, enc)
-                outStream.Write(ResMsg)
-            End Using
+            '送信
+            If SendData(TmpDir, FNaCRP, ResMsg, Test_Mode) Then
+                '成功
+                Using outStream = New StreamWriter(TmpDir + "HGSendResS.txt", False, enc)
+                    'MessageBox.Show(TmpDir + "HGSendResS.txt")
+                    outStream.Write("Success")
+                End Using
+            Else
+                '失敗
+                Using outStream = New StreamWriter(TmpDir + "HGSendResF.txt", False, enc)
+                    outStream.Write(ResMsg)
+                End Using
+            End If
         End If
 
     End Sub
